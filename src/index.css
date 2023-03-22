@@ -1,8 +1,28 @@
 @font-face {
-  font-family: "Poppins-Regular";
-  src: url("./font/Poppins-Regular.ttf");
+  font-family: 'Poppins-Regular';
+  src: url('./font/Poppins-Regular.ttf');
 }
 body {
   margin: 0;
-  font-family: "Poppins-Regular", sans-serif;
+  font-family: 'Poppins-Regular', sans-serif;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+p,
+li {
+  margin: 0;
+  padding: 0;
 }
