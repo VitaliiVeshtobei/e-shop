@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import HomePage from "../pages/HomePage/HomePage";
-import Layout from "./Layout/Layout";
+import Wrapper from "./Wrapper/Wrapper";
 function App() {
   return (
     <>
       <Routes>
-        <Route element={<Layout />}>
+        <Route element={<Wrapper />}>
           <Route index path="/" element={<HomePage />}></Route>
         </Route>
       </Routes>

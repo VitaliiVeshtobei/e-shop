@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
-export default function Layout() {
+export default function Wrapper() {
   return (
     <>
       <div>Layout</div>
