@@ -1,10 +1,11 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import React from 'react';
+import Header from './Header/Header';
+import { Outlet } from 'react-router-dom';
 
 export default function Wrapper() {
   return (
     <>
-      <div>Layout</div>
+      <Header />
       <Outlet></Outlet>
     </>
   );
