@@ -8,7 +8,7 @@ export const Container = styled('div')`
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  color: '#292d32';
+  color: #292d32;
 `;
 
 export const LocationContainer = styled('div')`
