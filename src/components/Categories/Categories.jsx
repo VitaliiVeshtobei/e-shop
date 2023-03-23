@@ -1,6 +1,6 @@
 import { List, Text, Wrapper } from './Categories.styled';
-import image1 from '../../image/Frame 29.png';
-import image2 from '../../image/Frame.png';
+import image1 from '../../assets/images/Frame 29.png';
+import image2 from '../../assets/images/Frame.png';
 import { CategoriesCard } from './CategoriesCard/CategoriesCard';
 
 const list = [
