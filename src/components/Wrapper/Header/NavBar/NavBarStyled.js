@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled('div')`
   display: flex;
+  gap: 100px;
   align-items: center;
-  justify-content: space-around;
+  padding: 0 63px;
   height: 70px;
   background-color: #f4f4f4;
   font-weight: 500;

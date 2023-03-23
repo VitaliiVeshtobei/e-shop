@@ -1,7 +1,7 @@
 import React from 'react';
 import { TiShoppingCart } from 'react-icons/ti';
 import { ButtonStyled, Container, FormStyled, InputStyled, CartContainer } from './SearchStyled';
-import logo from '../../../../image/logo 1.png';
+import logo from '../../../../assets/images/logo 1.png';
 
 const Search = () => {
   const handlerSubmit = (evt) => {
@@ -20,7 +20,7 @@ const Search = () => {
         <ButtonStyled type="submit">Search</ButtonStyled>
       </FormStyled>
       <CartContainer>
-        <TiShoppingCart style={{ color: 'white', height: 20, width: 15 }} />
+        <TiShoppingCart style={{ color: 'white', height: 24, width: 24 }} />
         <p>Cart</p>
       </CartContainer>
     </Container>
