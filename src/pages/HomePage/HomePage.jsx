@@ -1,9 +1,14 @@
+
+import React from 'react';
 import { Categories } from '../../components/Categories/Categories';
 
-export default function HomePage() {
+const HomePage = () => {
   return (
     <div>
       <Categories />
     </div>
   );
-}
+};
+
+export default HomePage;
+
