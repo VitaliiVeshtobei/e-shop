@@ -39,6 +39,11 @@ const list = [
     img: image1,
     category: 'Tablet as a laptop',
   },
+  {
+    id: 8,
+    img: image2,
+    category: 'Tablet as a laptop',
+  },
 ];
 
 export const Categories = () => {

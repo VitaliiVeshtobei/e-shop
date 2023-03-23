@@ -6,9 +6,13 @@
   font-family: 'Poppins-SemiBold';
   src: url('./assets/font/Poppins-SemiBold.ttf');
 }
+@font-face {
+  font-family: 'Poppins-Black';
+  src: url('./assets/font/Poppins-Black.ttf');
+}
 body {
   margin: 0;
-  font-family: 'Poppins-Regular', sans-serif;
+  font-family: 'Poppins-Regular', 'Poppins-Black', sans-serif;
 }
 
 *,
