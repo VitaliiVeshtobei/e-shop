@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-  /* padding: 60px 30px; */
+  padding-bottom: 30px;
+  padding-top: 75px;
 `;
 
 export const List = styled.ul`
@@ -14,9 +15,9 @@ export const List = styled.ul`
 export const Text = styled.h2`
   font-style: normal;
   font-weight: 600;
-  font-size: 27.38px;
+  font-size: 28px;
   line-height: 41px;
   text-align: center;
   color: #1b5a7d;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 `;
