@@ -3,4 +3,5 @@ export const theme = {
   lightBlue: '#E2F4FF',
   orange: '#EDA415',
   white: '#FFFFFF',
+  transition: 'transform 300ms ease, box-shadow 300ms ease',
 };
