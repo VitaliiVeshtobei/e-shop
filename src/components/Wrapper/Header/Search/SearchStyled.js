@@ -31,6 +31,7 @@ export const ButtonStyled = styled('button')`
   font-size: 14px;
   line-height: 21px;
   color: ${(p) => p.theme.white};
+  transition: ${(p) => p.theme.transition};
   cursor: pointer;
 
   &:hover,
