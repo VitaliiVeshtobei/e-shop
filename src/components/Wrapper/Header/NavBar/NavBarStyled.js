@@ -17,7 +17,7 @@ export const CategoriesContainer = styled('div')`
   color: ${(p) => p.theme.white};
   padding: 23px;
   cursor: pointer;
-
+  transition: ${(p) => p.theme.transition};
   &:hover,
   &:focus {
     box-shadow: 0px 3px 26px -1px #000000;
