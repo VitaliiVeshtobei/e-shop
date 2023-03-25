@@ -4,6 +4,7 @@ import Benefits from '../../components/Benefits/Benefits';
 import Brands from '../../components/Brands/Brands';
 import { Categories } from '../../components/Categories/Categories';
 import { Slider } from '../../components/Slide/Slider';
+import { SliderFeedbacks } from '../../components/SliderFeedbacks/SliderFeedbacks';
 
 const HomePage = () => {
   return (
@@ -12,9 +13,9 @@ const HomePage = () => {
       <Categories />
       <Banner />
       <Benefits />
+      <SliderFeedbacks />
       <Brands />
     </>
-
   );
 };
 
