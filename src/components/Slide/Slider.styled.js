@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-  height: 394px;
   width: 100%;
   background-color: rgb(255, 255, 255);
   padding: 37px 0 0;
-  display: grid;
-  grid-template-columns: 420px 420px;
+  display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 `;
 
 export const ImageContainer = styled.div`
@@ -17,6 +16,15 @@ export const ImageContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
 `;
+
+export const Div = styled.div`
+  width: 420px;
+
+  @media screen and (min-width: 419px) {
+    height: 325px;
+  }
+`;
+
 export const ContainerPrice = styled.div`
   position: absolute;
   bottom: 40px;
@@ -71,7 +79,7 @@ export const Button = styled.button`
   &:hover,
   &:focus {
     transform: scale(1.05);
-    -webkit-box-shadow: 0px 3px 26px -1px #000000;
+    -webkit-box-shadow: 0px 3px 16px -1px #000000;
     box-shadow: 0px 3px 16px -1px #000000;
   }
 `;

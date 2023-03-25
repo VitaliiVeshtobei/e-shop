@@ -8,13 +8,14 @@ import {
   ButtonContainer,
   ButtonSlide,
   SlideBtnContainer,
+  Div,
 } from './Slider.styled';
 import image from '../../assets/images/Camera.png';
 
 export const Slider = () => {
   return (
     <Wrapper>
-      <div>
+      <Div>
         <Title>
           <span>Canon</span>
           <span> camera</span>
@@ -28,15 +29,15 @@ export const Slider = () => {
           <ButtonSlide type="button" />
           <ButtonSlide type="button" />
         </SlideBtnContainer>
-      </div>
-      <div>
+      </Div>
+      <Div>
         <ImageContainer src={image}>
           <ContainerPrice>
             <p>only</p>
             <p>$89</p>
           </ContainerPrice>
         </ImageContainer>
-      </div>
+      </Div>
     </Wrapper>
   );
 };
