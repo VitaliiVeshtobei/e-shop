@@ -20,17 +20,19 @@ export const ButtonSlide = styled.button`
   cursor: pointer;
   width: 16px;
   height: 16px;
-  border: 1px solid #adadad;
+  border: 1px solid ${(p) => p.theme.colors.corrasion};
   border-radius: 50%;
   margin-top: 48px;
-  transition: transform 300ms ease, box-shadow 300ms ease, background-color 300ms ease, border 300ms ease;
+  background-color: transparent;
+  transition: transform ${(p) => p.theme.transition}, box-shadow ${(p) => p.theme.transition},
+    background-color ${(p) => p.theme.transition};
 
   &:hover,
   &:focus {
-    background-color: ${(p) => p.theme.orange};
+    background-color: ${(p) => p.theme.colors.accent};
     transform: scale(1.05);
-    -webkit-box-shadow: 0px 3px 6px -1px #000000;
-    box-shadow: 0px 3px 6px -1px #000000;
+    -webkit-box-shadow: 0px 3px 6px -1px ${(p) => p.theme.colors.darkHover};
+    box-shadow: 0px 3px 6px -1px ${(p) => p.theme.colors.darkHover};
     border: transparent;
     outline: transparent;
   }

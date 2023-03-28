@@ -18,17 +18,18 @@ export const LinkItem = styled(NavLink)`
   text-decoration: none;
   padding: 16px;
   overflow: hidden;
-  border: 1px solid #bababa;
+  border: 1px solid ${(p) => p.theme.colors.border};
+
   border-radius: 20px;
 
   cursor: pointer;
-  transition: transform 300ms ease, box-shadow 300ms ease;
+  transition: transform ${(p) => p.theme.transition}, box-shadow ${(p) => p.theme.transition};
 
   &:hover,
   &:focus {
     transform: scale(1.03);
-    -webkit-box-shadow: 0px 3px 12px -1px #000000;
-    box-shadow: 0px 3px 12px -1px #000000;
+    -webkit-box-shadow: 0px 3px 12px -1px ${(p) => p.theme.colors.darkHover};
+    box-shadow: 0px 3px 12px -1px ${(p) => p.theme.colors.darkHover};
     outline: transparent;
   }
 `;
@@ -36,10 +37,11 @@ export const LinkItem = styled(NavLink)`
 export const Box = styled.div`
   position: relative;
   overflow: hidden;
-  background: #e2f4ff;
+  background: ${(p) => p.theme.colors.smoke};
   border-radius: 19px;
-  color: #003f62;
+  color: ${(p) => p.theme.colors.darkText};
   height: 92px;
+
   p {
     font-style: normal;
     font-weight: 400;
@@ -67,25 +69,6 @@ export const Box = styled.div`
       border-radius: 3px;
       background-color: ${(p) => p.theme.blue};
     }
-
-    /* ::-webkit-scrollbar,
-    ::-moz-scrollbar,
-    ::-ms-scrollbar {
-      width: 5px;
-      background-color: red;
-    }
-    ::-webkit-scrollbar-thumb,
-    ::-moz-scrollbar-thumb,
-    ::-ms-scrollbar-thumb {
-      border-radius: 1px;
-      background-color: red;
-    }
-    ::-webkit-scrollbar-track,
-    ::-moz-scrollbar-track,
-    ::-ms-scrollbar-track {
-      background-color: red;
-      width: 2px;
-    } */
   }
 `;
 
@@ -99,7 +82,7 @@ export const Div = styled.div`
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: #003f62;
+    color: ${(p) => p.theme.colors.scndDarkText};
   }
 `;
 
@@ -110,11 +93,9 @@ export const AvatarContainer = styled.div`
   margin-right: 38px;
   padding: 7px;
   border-radius: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   overflow: hidden;
 
   img {

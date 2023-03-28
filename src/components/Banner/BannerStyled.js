@@ -22,13 +22,13 @@ export const ContainerInfo = styled('div')`
     font-size: 18px;
     line-height: 27px;
     text-align: center;
-    color: ${(p) => p.theme.white};
+    color: ${(p) => p.theme.colors.lightText};
     &:not(:last-child) {
       margin-bottom: 12px;
       font-weight: 700;
       font-size: 41px;
       line-height: 62px;
-      color: #2e8fc5;
+      color: ${(p) => p.theme.colors.corrasion};
     }
   }
   button {
@@ -44,17 +44,18 @@ export const ContainerInfo = styled('div')`
 export const ButtonStyled = styled('button')`
   width: 134px;
   height: 35px;
-  background: ${(p) => p.theme.orange};
+  background: ${(p) => p.theme.colors.accent};
   border-radius: 20px;
   border: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  color: ${(p) => p.theme.white};
+  color: ${(p) => p.theme.colors.lightText};
   cursor: pointer;
-  transition: ${(p) => p.theme.transition};
+  transition: transform ${(p) => p.theme.transition}, box-shadow ${(p) => p.theme.transition};
   &:hover,
   &:focus {
-    box-shadow: 0px 3px 26px -1px #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0px 3px 26px -1px ${(p) => p.theme.colors.smoke};
   }
 `;

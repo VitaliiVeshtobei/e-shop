@@ -49,7 +49,7 @@ const list = [
 export const Categories = () => {
   return (
     <Wrapper>
-      <Text>Категорії</Text>
+      <Text>Categories</Text>
       <Nav>
         {list.map((item) => (
           <CategoriesCard

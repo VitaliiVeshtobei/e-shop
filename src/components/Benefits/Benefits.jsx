@@ -28,8 +28,8 @@ const Benefits = () => {
             />
           </ImageContainer>
           <div>
-            <p>Best quality </p>
-            <p>best quality in low price</p>
+            <p>Найкраща якість</p>
+            <p>найкраща якість за приємною ціною</p>
           </div>
         </li>
         <li>
@@ -40,8 +40,8 @@ const Benefits = () => {
             />
           </ImageContainer>
           <div>
-            <p>1 year warranty</p>
-            <p>Avaliable warranty</p>
+            <p>1 рік гарантії</p>
+            <p>доступна гарантія</p>
           </div>
         </li>
       </List>
