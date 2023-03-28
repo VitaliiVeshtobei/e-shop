@@ -12,7 +12,7 @@ export const Container = styled('div')`
   color: #292d32;
 `;
 
-export const LocationContainer = styled('div')`
+export const ListLocation = styled('ul')`
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -22,5 +22,19 @@ export const LocationContainer = styled('div')`
   }
   p {
     margin-left: 10px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #292d32;
+  }
+`;
+
+export const ItemLocation = styled('li')`
+  display: flex;
+  align-items: center;
+  :not(:first-child) {
+    margin-left: 27px;
   }
 `;

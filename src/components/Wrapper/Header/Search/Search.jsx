@@ -16,12 +16,15 @@ const Search = () => {
         />
       </div>
       <FormStyled onSubmit={handlerSubmit}>
-        <InputStyled type="text" />
-        <ButtonStyled type="submit">Search</ButtonStyled>
+        <InputStyled
+          type="text"
+          placeholder="Я шукаю..."
+        />
+        <ButtonStyled type="submit">Знайти</ButtonStyled>
       </FormStyled>
       <CartContainer>
         <TiShoppingCart style={{ color: 'white', height: 24, width: 24 }} />
-        <p>Cart</p>
+        <p>Корзина</p>
       </CartContainer>
     </Container>
   );

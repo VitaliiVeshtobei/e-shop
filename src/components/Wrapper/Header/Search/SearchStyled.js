@@ -14,9 +14,18 @@ export const FormStyled = styled('form')`
 export const InputStyled = styled('input')`
   width: 438px;
   height: 56px;
+  padding: 17px 25px;
   background: ${(p) => p.theme.white};
   border-radius: 20px;
   border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  :focus {
+    outline: none;
+    border: none;
+  }
 `;
 
 export const ButtonStyled = styled('button')`
