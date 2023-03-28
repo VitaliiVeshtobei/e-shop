@@ -4,7 +4,7 @@ export const Wrapper = styled.section`
   margin-top: 75px;
 `;
 
-export const List = styled.ul`
+export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

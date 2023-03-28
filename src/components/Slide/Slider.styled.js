@@ -81,6 +81,7 @@ export const Button = styled.button`
     transform: scale(1.05);
     -webkit-box-shadow: 0px 3px 16px -1px #000000;
     box-shadow: 0px 3px 16px -1px #000000;
+    outline: transparent;
   }
 `;
 
@@ -110,6 +111,7 @@ export const ButtonView = styled.button`
     transform: scale(1.05);
     -webkit-box-shadow: 0px 3px 26px -1px #000000;
     box-shadow: 0px 3px 16px -1px #000000;
+    outline: transparent;
   }
 `;
 
@@ -123,7 +125,7 @@ export const SlideBtnContainer = styled.div`
   margin-left: 120px;
 `;
 
-export const ButtonSlide = styled.div`
+export const ButtonSlide = styled.button`
   cursor: pointer;
   width: 16px;
   height: 16px;
@@ -138,6 +140,7 @@ export const ButtonSlide = styled.div`
     -webkit-box-shadow: 0px 3px 6px -1px #000000;
     box-shadow: 0px 3px 6px -1px #000000;
     border: transparent;
+    outline: transparent;
   }
 
   :not(:last-child) {
