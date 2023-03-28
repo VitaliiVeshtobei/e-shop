@@ -7,17 +7,17 @@ export const Item = styled.li`
   justify-content: center;
   width: 315px;
   height: 315px;
-  border: 1px solid #b6b6b6;
+  border: 1px solid ${(p) => p.theme.colors.border};
   border-radius: 20px;
   margin: 15px;
   cursor: pointer;
-  transition: transform 300ms ease, box-shadow 300ms ease;
+  transition: transform ${(p) => p.theme.transition}, box-shadow ${(p) => p.theme.transition};
 
   &:hover,
   &:focus {
     transform: scale(1.05);
-    -webkit-box-shadow: 0px 3px 26px -1px #000000;
-    box-shadow: 0px 3px 26px -1px #000000;
+    -webkit-box-shadow: 0px 3px 26px -1px ${(p) => p.theme.colors.darkHover};
+    box-shadow: 0px 3px 26px -1px ${(p) => p.theme.colors.darkHover};
   }
 
   p {
@@ -26,7 +26,7 @@ export const Item = styled.li`
     font-size: 18px;
     line-height: 1.44;
 
-    color: #003f62;
+    color: ${(p) => p.theme.colors.scndDarkText};
   }
 `;
 

@@ -9,7 +9,7 @@ export const Container = styled('div')`
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  color: #292d32;
+  color: ${(p) => p.theme.colors.darkText};
 `;
 
 export const ListLocation = styled('ul')`
