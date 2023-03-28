@@ -1,7 +1,20 @@
 export const theme = {
-  blue: '#003F62',
-  lightBlue: '#E2F4FF',
-  orange: '#EDA415',
-  white: '#FFFFFF',
-  transition: 'transform 300ms ease, box-shadow 300ms ease',
+  colors: {
+    accent: '#EDA415',
+    accentBg: '#335252',
+    lightText: '#FFFFFF',
+    darkText: '#2D3033',
+    scndDarkText: '#335252',
+    corrasion: '#AA4B41',
+    border: '#B6B6B6',
+    navbar: '#F4F4F4',
+    smoke: '#D4DDE1',
+    greyText: '#595959',
+    checkboxBg: 'rgba(98, 148, 148, 0.85)',
+    unactive: '#AFAFAF',
+    available: '#30BD57',
+    darkHover: '#2D3033',
+  },
+
+  transition: '300ms ease',
 };

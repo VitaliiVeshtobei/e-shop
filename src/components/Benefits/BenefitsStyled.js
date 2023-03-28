@@ -6,7 +6,7 @@ export const Container = styled('div')`
   align-items: center;
   height: 155px;
   margin-top: 75px;
-  background-color: ${(p) => p.theme.lightBlue};
+  background-color: ${(p) => p.theme.colors.accentBg};
   border-radius: 20px;
 `;
 export const List = styled('ul')`
@@ -21,12 +21,12 @@ export const List = styled('ul')`
       font-weight: 400;
       font-size: 18.09px;
       line-height: 27px;
-      color: #003f62;
+      color: ${(p) => p.theme.colors.lightText};
       &:not(:last-child) {
         font-weight: 600;
         font-size: 22.09px;
         line-height: 33px;
-        color: #003f62;
+        color: ${(p) => p.theme.colors.lightText};
       }
     }
   }

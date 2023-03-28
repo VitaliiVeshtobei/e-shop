@@ -17,6 +17,6 @@ export const Text = styled.h2`
   font-size: 28px;
   line-height: 41px;
   text-align: center;
-  color: #1b5a7d;
+  color: ${(p) => p.theme.colors.darkText};
   margin-bottom: 50px;
 `;

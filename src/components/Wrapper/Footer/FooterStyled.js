@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled('div')`
   height: 420px;
-  background-color: ${(p) => p.theme.lightBlue};
+  background-color: ${(p) => p.theme.colors.accentBg};
   padding: 25px 60px;
 `;
 
@@ -21,14 +21,14 @@ export const LogoContainer = styled('div')`
     font-weight: 400;
     font-size: 16.38px;
     line-height: 25px;
-    color: #1b5a7d;
+    color: ${(p) => p.theme.colors.lightText};
     ::after {
       content: '';
       margin-top: 36px;
       margin-bottom: 25px;
       display: block;
       width: 100%;
-      border: 1px solid #9d9d9d;
+      border: 1px solid ${(p) => p.theme.colors.border};
     }
   }
 `;
@@ -41,7 +41,7 @@ export const ListIconsStyled = styled('ul')`
 
   li {
     cursor: pointer;
-    color: #3b3b3b;
+    color: ${(p) => p.theme.colors.smoke};
     svg {
       width: 20px;
       height: 20px;
@@ -96,7 +96,7 @@ export const TitleCategories = styled('p')`
   font-weight: 600;
   font-size: 19.38px;
   line-height: 29px;
-  color: #1b5a7d;
+  color: ${(p) => p.theme.colors.accent};
 `;
 
 export const ListCategories = styled('ul')`
@@ -105,8 +105,8 @@ export const ListCategories = styled('ul')`
     font-weight: 400;
     font-size: 19.38px;
     line-height: 29px;
-    color: #1b5a7d;
-    transition: ${(p) => p.theme.transition};
+    color: ${(p) => p.theme.colors.lightText};
+    transition: transform ${(p) => p.theme.transition}, text-shadow ${(p) => p.theme.transition};
     cursor: pointer;
     &:hover,
     &:focus {
