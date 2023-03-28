@@ -1,7 +1,59 @@
 import React from 'react';
 import { FaPhone, FaTelegram, FaViber } from 'react-icons/fa';
-import { FooterContainer, Container, LogoContainer, ListIconsStyled, ListTextStyled } from './FooterStyled';
+import {
+  FooterContainer,
+  Container,
+  LogoContainer,
+  ListIconsStyled,
+  ListTextStyled,
+  CategoriesContainer,
+  TitleCategories,
+  ListCategories,
+} from './FooterStyled';
 import logoFooter from '../../../assets/images/logo-footer.png';
+
+const list = [
+  {
+    id: 1,
+
+    category: 'Підрульові шлейфи',
+  },
+  {
+    id: 2,
+
+    category: 'Бризговики автомобільні',
+  },
+  {
+    id: 3,
+
+    category: 'Круїз контроль комплект Toyota',
+  },
+  {
+    id: 4,
+
+    category: 'Проблискові маячки',
+  },
+  {
+    id: 5,
+
+    category: 'Ручки перемикання передач',
+  },
+  {
+    id: 6,
+
+    category: 'Накладки на педалі',
+  },
+  {
+    id: 7,
+
+    category: 'Кнопки руля',
+  },
+  {
+    id: 8,
+
+    category: 'Модуль складання дзеркала',
+  },
+];
 
 const Footer = () => {
   return (
@@ -12,7 +64,7 @@ const Footer = () => {
             src={logoFooter}
             alt="logo-footer"
           />
-          <p>64 st james boulevard hoswick , ze2 7zj</p>
+          <p>Київ, вул. Вишгородська 30, Київ, Україна</p>
           <ListIconsStyled>
             <li>
               <FaTelegram />
@@ -26,7 +78,18 @@ const Footer = () => {
           </ListIconsStyled>
         </LogoContainer>
 
-        <ListTextStyled>
+        <CategoriesContainer>
+          <TitleCategories>Categories</TitleCategories>
+          <ListCategories>
+            {list.map((item) => (
+              <li key={item.id}>
+                <p>{item.category}</p>
+              </li>
+            ))}
+          </ListCategories>
+        </CategoriesContainer>
+
+        {/* <ListTextStyled>
           <li>
             <span>Find product</span>
             <p>Brownze arnold</p>
@@ -51,7 +114,7 @@ const Footer = () => {
             <p>Custmer care</p>
             <p>Faq’s</p>
           </li>
-        </ListTextStyled>
+        </ListTextStyled> */}
       </Container>
     </FooterContainer>
   );

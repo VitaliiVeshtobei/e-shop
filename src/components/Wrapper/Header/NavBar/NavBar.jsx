@@ -52,13 +52,15 @@ const NavBar = () => {
     <>
       <Container>
         <CategoriesContainer onClick={handleClick}>
-          <p>Browse categories</p>
+          <p>Каталог товарів</p>
         </CategoriesContainer>
         <ListContainer>
-          <p>Home</p>
-          <p>Catalog</p>
-          <p>Pages</p>
-          <p>About us</p>
+          <p>Головна</p>
+          <p>Всі товари</p>
+          <p>Відгуки</p>
+          <p>Контакти</p>
+          <p>Про нас</p>
+          <p>Доставка і оплата</p>
         </ListContainer>
       </Container>
       <ListCategoriesContainer showCategories={showCategories}>

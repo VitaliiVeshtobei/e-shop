@@ -7,49 +7,49 @@ const list = [
   {
     id: 1,
     img: image1,
-    category: 'Tablet as a laptop',
+    category: 'Підрульові шлейфи',
   },
   {
     id: 2,
     img: image2,
-    category: 'Wireless headphones',
+    category: 'Бризговики автомобільні',
   },
   {
     id: 3,
     img: image1,
-    category: 'Tablet as a laptop',
+    category: 'Круїз контроль комплект Toyota',
   },
   {
     id: 4,
     img: image2,
-    category: 'Wireless headphones',
+    category: 'Проблискові маячки',
   },
   {
     id: 5,
     img: image1,
-    category: 'Tablet as a laptop',
+    category: 'Ручки перемикання передач',
   },
   {
     id: 6,
     img: image2,
-    category: 'Wireless headphones',
+    category: 'Накладки на педалі',
   },
   {
     id: 7,
     img: image1,
-    category: 'Tablet as a laptop',
+    category: 'Кнопки руля',
   },
   {
     id: 8,
     img: image2,
-    category: 'Tablet as a laptop',
+    category: 'Модуль складання дзеркала',
   },
 ];
 
 export const Categories = () => {
   return (
     <Wrapper>
-      <Text>Categories</Text>
+      <Text>Категорії</Text>
       <List>
         {list.map((item) => (
           <CategoriesCard
