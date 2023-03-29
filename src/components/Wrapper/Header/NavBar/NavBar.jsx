@@ -1,49 +1,6 @@
 import React, { useState } from 'react';
-import {
-  ButtonCategories,
-  Container,
-  ItemCategories,
-  ListCategories,
-  ListCategoriesContainer,
-  ListContainer,
-  NavLinkStyled,
-  TextStyled,
-} from './NavBarStyled';
-
-const list = [
-  {
-    id: 1,
-    category: 'Tablet as a laptop',
-  },
-  {
-    id: 2,
-    category: 'Wireless headphones',
-  },
-  {
-    id: 3,
-    category: 'Tablet as a laptop',
-  },
-  {
-    id: 4,
-    category: 'Wireless headphones',
-  },
-  {
-    id: 5,
-    category: 'Tablet as a laptop',
-  },
-  {
-    id: 6,
-    category: 'Wireless headphones',
-  },
-  {
-    id: 7,
-    category: 'Tablet as a laptop',
-  },
-  {
-    id: 8,
-    category: 'Tablet as a laptop',
-  },
-];
+import MenuCategories from './MenuCategories/MenuCategories';
+import { ButtonCategories, Container, ListContainer, NavLinkStyled, TextStyled } from './NavBarStyled';
 
 const NavBar = () => {
   const [showCategories, setShowCategories] = useState(false);
@@ -80,15 +37,12 @@ const NavBar = () => {
           </NavLinkStyled>
         </ListContainer>
       </Container>
-      <ListCategoriesContainer showCategories={showCategories}>
-        <ListCategories>
-          {list.map((item) => (
-            <ItemCategories key={item.id}>
-              <p>{item.category}</p>
-            </ItemCategories>
-          ))}
-        </ListCategories>
-      </ListCategoriesContainer>
+      {showCategories && (
+        <MenuCategories
+          handleClick={handleClick}
+          showCategories={showCategories}
+        />
+      )}
     </>
   );
 };
