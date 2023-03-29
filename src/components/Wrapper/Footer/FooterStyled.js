@@ -1,25 +1,27 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled('div')`
-  height: 420px;
+  height: 270px;
   background-color: ${(p) => p.theme.colors.accentBg};
   padding: 25px 60px;
 `;
 
 export const Container = styled('div')`
   display: flex;
-  /* justify-content: space-between; */
+  height: 216px;
+  justify-content: space-between;
   align-items: center;
 `;
 
 export const LogoContainer = styled('div')`
+  /* margin-right: 100px; */
   img {
     margin-bottom: 40px;
   }
   p {
-    width: 183px;
+    width: 310px;
     font-weight: 400;
-    font-size: 16.38px;
+    font-size: 20px;
     line-height: 25px;
     color: ${(p) => p.theme.colors.lightText};
     ::after {
@@ -29,22 +31,6 @@ export const LogoContainer = styled('div')`
       display: block;
       width: 100%;
       border: 1px solid ${(p) => p.theme.colors.border};
-    }
-  }
-`;
-
-export const ListIconsStyled = styled('ul')`
-  list-style: none;
-  display: flex;
-  justify-content: start;
-  gap: 40px;
-
-  li {
-    cursor: pointer;
-    color: ${(p) => p.theme.colors.smoke};
-    svg {
-      width: 20px;
-      height: 20px;
     }
   }
 `;
@@ -87,23 +73,26 @@ export const ListIconsStyled = styled('ul')`
 // `;
 
 export const CategoriesContainer = styled('div')`
-  margin-left: 100px;
+  /* margin-right: 190px; */
 `;
 export const TitleCategories = styled('p')`
-  margin-bottom: 13px;
-  font-family: 'Poppins-SemiBold';
+  margin-bottom: 21px;
   font-style: normal;
   font-weight: 600;
-  font-size: 19.38px;
+  font-size: 20px;
   line-height: 29px;
   color: ${(p) => p.theme.colors.accent};
 `;
 
 export const ListCategories = styled('ul')`
+  height: 140px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   li {
     font-style: normal;
     font-weight: 400;
-    font-size: 19.38px;
+    font-size: 19px;
     line-height: 29px;
     color: ${(p) => p.theme.colors.lightText};
     transition: transform ${(p) => p.theme.transition}, text-shadow ${(p) => p.theme.transition};
@@ -111,11 +100,82 @@ export const ListCategories = styled('ul')`
     &:hover,
     &:focus {
       transform: scale(1.05);
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #eda415, 0 0 30px #eda415, 0 0 40px #eda415,
-        0 0 55px #eda415, 0 0 75px #eda415, 2px 2px 2px rgba(237, 164, 21, 0);
     }
-    :not(:last-child) {
-      margin-bottom: 8px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
     }
+    &:not(:nth-last-child(-n + 3)) {
+      margin-right: 150px;
+    }
+  }
+`;
+
+export const ContactsContainer = styled.div``;
+export const ContactsList = styled.ul``;
+export const ContactsItem = styled.li`
+  margin-bottom: 28px;
+  transition: transform ${(p) => p.theme.transition};
+  display: flex;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+
+  a {
+    display: flex;
+  }
+  svg {
+    margin-right: 16px;
+    width: 30px;
+    height: 30px;
+    stroke: ${(p) => p.theme.colors.smoke};
+    stroke-width: 1px;
+  }
+  p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.25;
+    color: ${(p) => p.theme.colors.smoke};
+  }
+`;
+
+export const ListIconsStyled = styled('ul')`
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  gap: 40px;
+  li {
+    transition: transform ${(p) => p.theme.transition};
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+    }
+  }
+`;
+
+export const ListIconsLink = styled.a`
+  color: ${(p) => p.theme.colors.smoke};
+  transition: color ${(p) => p.theme.transition};
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    color: ${(p) => {
+      switch (p.color) {
+        case 'tg':
+          return '#2AABEE';
+        case 'vb':
+          return '#7360F2';
+        case 'wt':
+          return '#25D366';
+        default:
+          return p.theme.colors.accent;
+      }
+    }};
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
   }
 `;
