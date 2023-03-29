@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import {
-  CategoriesContainer,
+  ButtonCategories,
   Container,
   ItemCategories,
   ListCategories,
   ListCategoriesContainer,
   ListContainer,
+  NavLinkStyled,
+  TextStyled,
 } from './NavBarStyled';
 
 const list = [
@@ -51,16 +53,31 @@ const NavBar = () => {
   return (
     <>
       <Container>
-        <CategoriesContainer onClick={handleClick}>
-          <p>Каталог товарів</p>
-        </CategoriesContainer>
+        <ButtonCategories
+          type="button"
+          onClick={handleClick}
+        >
+          Каталог товарів
+        </ButtonCategories>
         <ListContainer>
-          <p>Головна</p>
-          <p>Всі товари</p>
-          <p>Відгуки</p>
-          <p>Контакти</p>
-          <p>Про нас</p>
-          <p>Доставка і оплата</p>
+          <NavLinkStyled>
+            <TextStyled>Головна</TextStyled>
+          </NavLinkStyled>
+          <NavLinkStyled>
+            <TextStyled>Всі товари</TextStyled>
+          </NavLinkStyled>
+          <NavLinkStyled>
+            <TextStyled>Відгуки</TextStyled>
+          </NavLinkStyled>
+          <NavLinkStyled>
+            <TextStyled>Контакти</TextStyled>
+          </NavLinkStyled>
+          <NavLinkStyled>
+            <TextStyled>Про нас</TextStyled>
+          </NavLinkStyled>
+          <NavLinkStyled>
+            <TextStyled>Доставка і оплата</TextStyled>
+          </NavLinkStyled>
         </ListContainer>
       </Container>
       <ListCategoriesContainer showCategories={showCategories}>

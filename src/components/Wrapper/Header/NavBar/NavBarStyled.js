@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled('div')`
   display: flex;
@@ -12,7 +13,12 @@ export const Container = styled('div')`
   line-height: 24px;
 `;
 
-export const CategoriesContainer = styled('div')`
+export const ButtonCategories = styled('button')`
+  border: none;
+  height: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
   background-color: ${(p) => p.theme.colors.accent};
   color: ${(p) => p.theme.colors.lightText};
   padding: 23px;
@@ -23,14 +29,21 @@ export const CategoriesContainer = styled('div')`
     box-shadow: 0px 3px 26px -1px ${(p) => p.theme.colors.darkHover};
   }
 `;
-export const ListContainer = styled('div')`
+export const ListContainer = styled('ul')`
   display: flex;
   align-items: center;
   gap: 30px;
-  p {
-    color: ${(p) => p.theme.colors.darkText};
-    cursor: pointer;
-  }
+`;
+
+export const NavLinkStyled = styled(NavLink)`
+  cursor: pointer;
+`;
+
+export const TextStyled = styled('p')`
+  color: ${(p) => p.theme.colors.darkText};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
 `;
 
 export const ListCategoriesContainer = styled('div')`
@@ -38,7 +51,7 @@ export const ListCategoriesContainer = styled('div')`
   margin-left: 63px;
   overflow: hidden;
   box-sizing: border-box;
-  transition: height 0.5s ease-in;
+  transition: height ${(p) => p.theme.transition};
   height: ${(p) => (p.showCategories ? '100%' : '0')};
   width: 375px;
 `;
