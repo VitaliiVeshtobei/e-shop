@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.section`
   width: 100%;
-  /* background-color: rgb(255, 255, 255); */
   padding: 37px 0 0;
   display: flex;
   justify-content: space-evenly;
@@ -81,6 +80,7 @@ export const Button = styled.button`
     transform: scale(1.05);
     -webkit-box-shadow: 0px 3px 16px -1px ${(p) => p.theme.colors.darkHover};
     box-shadow: 0px 3px 16px -1px ${(p) => p.theme.colors.darkHover};
+    outline: transparent;
   }
 `;
 
@@ -110,6 +110,7 @@ export const ButtonView = styled.button`
     transform: scale(1.05);
     -webkit-box-shadow: 0px 3px 26px -1px ${(p) => p.theme.colors.darkHover};
     box-shadow: 0px 3px 16px -1px ${(p) => p.theme.colors.darkHover};
+    outline: transparent;
   }
 `;
 
@@ -123,14 +124,14 @@ export const SlideBtnContainer = styled.div`
   margin-left: 120px;
 `;
 
-export const ButtonSlide = styled.div`
+export const ButtonSlide = styled.button`
   cursor: pointer;
   width: 16px;
   height: 16px;
   border: 1px solid ${(p) => p.theme.colors.corrasion};
   border-radius: 50%;
   transition: transform ${(p) => p.theme.transition}, box-shadow ${(p) => p.theme.transition},
-    background-color ${(p) => p.theme.transition}, border 300ms ease;
+    background-color ${(p) => p.theme.transition};
 
   &:hover,
   &:focus {
@@ -139,6 +140,7 @@ export const ButtonSlide = styled.div`
     -webkit-box-shadow: 0px 3px 6px -1px ${(p) => p.theme.colors.darkHover};
     box-shadow: 0px 3px 6px -1px ${(p) => p.theme.colors.darkHover};
     border: transparent;
+    outline: transparent;
   }
 
   :not(:last-child) {

@@ -1,4 +1,4 @@
-import { List, Text, Wrapper } from './Categories.styled';
+import { Nav, Text, Wrapper } from './Categories.styled';
 import image1 from '../../assets/images/Frame 29.png';
 import image2 from '../../assets/images/Frame.png';
 import { CategoriesCard } from './CategoriesCard/CategoriesCard';
@@ -50,7 +50,7 @@ export const Categories = () => {
   return (
     <Wrapper>
       <Text>Категорії</Text>
-      <List>
+      <Nav>
         {list.map((item) => (
           <CategoriesCard
             key={item.id}
@@ -59,7 +59,7 @@ export const Categories = () => {
             category={item.category}
           />
         ))}
-      </List>
+      </Nav>
     </Wrapper>
   );
 };

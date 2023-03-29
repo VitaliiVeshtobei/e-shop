@@ -1,6 +1,7 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const Item = styled.li`
+export const Item = styled(NavLink)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,6 +19,7 @@ export const Item = styled.li`
     transform: scale(1.05);
     -webkit-box-shadow: 0px 3px 26px -1px ${(p) => p.theme.colors.darkHover};
     box-shadow: 0px 3px 26px -1px ${(p) => p.theme.colors.darkHover};
+    outline: transparent;
   }
 
   p {
