@@ -17,21 +17,22 @@ export const List = styled('ul')`
   li {
     display: flex;
     align-items: center;
+    h3 {
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 22.09px;
+      line-height: 33px;
+      color: ${(p) => p.theme.colors.lightText};
+    }
     p {
       font-weight: 400;
       font-size: 18.09px;
       line-height: 27px;
       color: ${(p) => p.theme.colors.lightText};
-      &:not(:last-child) {
-        font-weight: 600;
-        font-size: 22.09px;
-        line-height: 33px;
-        color: ${(p) => p.theme.colors.lightText};
-      }
     }
   }
 `;
 
-export const ImageContainer = styled('div')`
+export const SvgContainer = styled('div')`
   margin-right: 31px;
 `;

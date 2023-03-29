@@ -24,7 +24,9 @@ export const ButtonCategories = styled('button')`
   padding: 23px;
   cursor: pointer;
   transition: ${(p) => p.theme.transition};
-  &:hover,
+  &:hover {
+    box-shadow: 0px 3px 26px -1px ${(p) => p.theme.colors.darkHover};
+  }
   &:focus {
     box-shadow: 0px 3px 26px -1px ${(p) => p.theme.colors.darkHover};
   }

@@ -1,47 +1,49 @@
 import React from 'react';
-import { Container, ImageContainer, List } from './BenefitsStyled';
-import crown from '../../assets/images/crown.png';
-import sheild from '../../assets/images/shield-security.png';
-import box from '../../assets/images/box-tick.png';
+import { TbTruckDelivery } from 'react-icons/tb';
+import { MdOutlineHighQuality, MdStorage } from 'react-icons/md';
+import { Container, SvgContainer, List } from './BenefitsStyled';
 
 const Benefits = () => {
   return (
     <Container>
       <List>
         <li>
-          <ImageContainer>
-            <img
-              src={box}
-              alt="box"
+          <SvgContainer>
+            <TbTruckDelivery
+              style={{ width: 67, height: 67 }}
+              stroke="#EDA415"
             />
-          </ImageContainer>
+          </SvgContainer>
           <div>
-            <p>Free delivery</p>
-            <p>on order above $50,00</p>
+            <h3>Доставка</h3>
+            <p>Без передплати</p>
+            <p>Доставка по Україні 1-2 дні</p>
           </div>
         </li>
         <li>
-          <ImageContainer>
-            <img
-              src={crown}
-              alt="crown"
+          <SvgContainer>
+            <MdOutlineHighQuality
+              style={{ width: 67, height: 67 }}
+              fill="#EDA415"
             />
-          </ImageContainer>
+          </SvgContainer>
           <div>
+            <h3>Якість</h3>
             <p>Найкраща якість</p>
-            <p>найкраща якість за приємною ціною</p>
+            <p>За приємною ціною</p>
           </div>
         </li>
         <li>
-          <ImageContainer>
-            <img
-              src={sheild}
-              alt="sheild"
+          <SvgContainer>
+            <MdStorage
+              style={{ width: 67, height: 67 }}
+              fill="#EDA415"
             />
-          </ImageContainer>
+          </SvgContainer>
           <div>
-            <p>1 рік гарантії</p>
-            <p>доступна гарантія</p>
+            <h3>Склад</h3>
+            <p>Склад в Києві</p>
+            <p>Можливий самовивіз</p>
           </div>
         </li>
       </List>
