@@ -1,19 +1,14 @@
 import React from 'react';
 import { TbTruckDelivery } from 'react-icons/tb';
 import { MdOutlineHighQuality, MdStorage } from 'react-icons/md';
-import { Container, SvgContainer, List } from './BenefitsStyled';
+import { Container, List } from './BenefitsStyled';
 
 const Benefits = () => {
   return (
     <Container>
       <List>
         <li>
-          <SvgContainer>
-            <TbTruckDelivery
-              style={{ width: 67, height: 67 }}
-              stroke="#EDA415"
-            />
-          </SvgContainer>
+          <TbTruckDelivery />
           <div>
             <h3>Доставка</h3>
             <p>Без передплати</p>
@@ -21,12 +16,7 @@ const Benefits = () => {
           </div>
         </li>
         <li>
-          <SvgContainer>
-            <MdOutlineHighQuality
-              style={{ width: 67, height: 67 }}
-              fill="#EDA415"
-            />
-          </SvgContainer>
+          <MdOutlineHighQuality />
           <div>
             <h3>Якість</h3>
             <p>Найкраща якість</p>
@@ -34,12 +24,7 @@ const Benefits = () => {
           </div>
         </li>
         <li>
-          <SvgContainer>
-            <MdStorage
-              style={{ width: 67, height: 67 }}
-              fill="#EDA415"
-            />
-          </SvgContainer>
+          <MdStorage />
           <div>
             <h3>Склад</h3>
             <p>Склад в Києві</p>

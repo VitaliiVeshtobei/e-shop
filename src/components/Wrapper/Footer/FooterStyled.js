@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const FooterContainer = styled('div')`
   height: 270px;
@@ -38,6 +39,7 @@ export const LogoContainer = styled('div')`
 export const CategoriesContainer = styled('div')`
   width: 450px;
 `;
+
 export const TitleCategories = styled('p')`
   margin-bottom: 21px;
   font-style: normal;
@@ -53,13 +55,7 @@ export const ListCategories = styled('ul')`
   flex-wrap: wrap;
   flex-direction: column;
   li {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 19px;
-    line-height: 29px;
-    color: ${(p) => p.theme.colors.lightText};
-    transition: transform ${(p) => p.theme.transition}, text-shadow ${(p) => p.theme.transition};
-    cursor: pointer;
+    transition: transform ${(p) => p.theme.transition};
     &:hover,
     &:focus {
       transform: scale(1.05);
@@ -70,6 +66,31 @@ export const ListCategories = styled('ul')`
     &:not(:nth-last-child(-n + 3)) {
       margin-right: 150px;
     }
+  }
+`;
+
+export const CategoriesLink = styled(NavLink)`
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.52;
+  color: ${(p) => p.theme.colors.lightText};
+  position: relative;
+  &::after {
+    content: '';
+    position: ${(p) => p.theme.line.position};
+    bottom: ${(p) => p.theme.line.bottom};
+    left: ${(p) => p.theme.line.left};
+    transition: ${(p) => p.theme.line.transition};
+    width: ${(p) => p.theme.line.width};
+    height: ${(p) => p.theme.line.height};
+    background-color: ${(p) => p.theme.line.bgColor};
+  }
+
+  &:hover::after {
+    width: ${(p) => p.theme.lineHover.width};
+  }
+  &:focus::after {
+    width: ${(p) => p.theme.lineHover.width};
   }
 `;
 
@@ -86,6 +107,10 @@ export const ContactsItem = styled.li`
 
   a {
     display: flex;
+    position: relative;
+    font-size: 19px;
+    line-height: 1.25;
+    color: ${(p) => p.theme.colors.lightText};
   }
   svg {
     margin-right: 16px;
@@ -95,10 +120,6 @@ export const ContactsItem = styled.li`
     stroke-width: 1px;
   }
   p {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.25;
-    color: ${(p) => p.theme.colors.smoke};
   }
 `;
 

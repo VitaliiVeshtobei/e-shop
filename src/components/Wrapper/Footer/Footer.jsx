@@ -13,6 +13,7 @@ import {
   ContactsList,
   ContactsItem,
   ListIconsLink,
+  CategoriesLink,
 } from './FooterStyled';
 import logoFooter from '../../../assets/images/logo-footer.png';
 
@@ -66,7 +67,7 @@ const Footer = () => {
           <ListCategories>
             {list.map((item) => (
               <li key={item.id}>
-                <p>{item.category}</p>
+                <CategoriesLink>{item.category}</CategoriesLink>
               </li>
             ))}
           </ListCategories>
@@ -77,7 +78,7 @@ const Footer = () => {
             <ContactsItem>
               <a href="tel:+380666125324">
                 <CiPhone />
-                <p>+380 (66) 612-53-24</p>
+                +380 (66) 612-53-24
               </a>
             </ContactsItem>
             <ContactsItem>
@@ -87,7 +88,7 @@ const Footer = () => {
                 rel="noreferrer noopener nofollow"
               >
                 <CiLocationOn />
-                <p>Київ, Україна</p>
+                Київ, Україна
               </a>
             </ContactsItem>
           </ContactsList>

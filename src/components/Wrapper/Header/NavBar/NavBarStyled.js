@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled('div')`
   display: flex;
@@ -37,12 +38,35 @@ export const ListContainer = styled('ul')`
 `;
 
 export const ItemContainer = styled('li')`
-  cursor: pointer;
+  transition: transform ${(p) => p.theme.transition};
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
 `;
 
-export const TextStyled = styled('p')`
+export const NavLinkStyled = styled(NavLink)`
   color: ${(p) => p.theme.colors.darkText};
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: ${(p) => p.theme.line.position};
+    bottom: ${(p) => p.theme.line.bottom};
+    left: ${(p) => p.theme.line.left};
+    transition: ${(p) => p.theme.line.transition};
+    width: ${(p) => p.theme.line.width};
+    height: ${(p) => p.theme.line.height};
+    background-color: ${(p) => p.theme.line.bgColor};
+  }
+
+  &:hover::after {
+    width: ${(p) => p.theme.lineHover.width};
+  }
+  &:focus::after {
+    width: ${(p) => p.theme.lineHover.width};
+  }
 `;

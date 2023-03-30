@@ -16,5 +16,16 @@ export const theme = {
     darkHover: '#2D3033',
   },
 
+  line: {
+    position: 'absolute',
+    bottom: '-10px',
+    left: '0',
+    transition: 'width 800ms ease',
+    width: '0',
+    height: '3px',
+    bgColor: '#EDA415',
+  },
+  lineHover: { width: '100%' },
+
   transition: '300ms ease',
 };

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import MenuCategories from './MenuCategories/MenuCategories';
-import { ButtonCategories, Container, ListContainer, TextStyled, ItemContainer } from './NavBarStyled';
+import { ButtonCategories, Container, ListContainer, ItemContainer, NavLinkStyled } from './NavBarStyled';
 
 const NavBar = () => {
   const [showCategories, setShowCategories] = useState(false);
@@ -19,39 +18,27 @@ const NavBar = () => {
         </ButtonCategories>
         <ListContainer>
           <ItemContainer>
-            <NavLink>
-              <TextStyled>Головна</TextStyled>
-            </NavLink>
+            <NavLinkStyled>Головна</NavLinkStyled>
           </ItemContainer>
 
           <ItemContainer>
-            <NavLink>
-              <TextStyled>Всі товари</TextStyled>
-            </NavLink>
+            <NavLinkStyled>Всі товари</NavLinkStyled>
           </ItemContainer>
 
           <ItemContainer>
-            <NavLink>
-              <TextStyled>Відгуки</TextStyled>
-            </NavLink>
+            <NavLinkStyled>Відгуки</NavLinkStyled>
           </ItemContainer>
 
           <ItemContainer>
-            <NavLink>
-              <TextStyled>Контакти</TextStyled>
-            </NavLink>
+            <NavLinkStyled>Контакти</NavLinkStyled>
           </ItemContainer>
 
           <ItemContainer>
-            <NavLink>
-              <TextStyled>Про нас</TextStyled>
-            </NavLink>
+            <NavLinkStyled>Про нас</NavLinkStyled>
           </ItemContainer>
 
           <ItemContainer>
-            <NavLink>
-              <TextStyled>Доставка і оплата</TextStyled>
-            </NavLink>
+            <NavLinkStyled>Доставка і оплата</NavLinkStyled>
           </ItemContainer>
         </ListContainer>
       </Container>
