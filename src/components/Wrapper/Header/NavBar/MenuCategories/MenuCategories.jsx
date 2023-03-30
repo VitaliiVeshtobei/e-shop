@@ -7,43 +7,7 @@ import {
   NavLinkStyled,
 } from './MenuCategoriesStyled';
 
-const list = [
-  {
-    id: 1,
-    category: 'Підрульові шлейфи',
-  },
-  {
-    id: 2,
-    category: 'Бризговики автомобільні',
-  },
-  {
-    id: 3,
-    category: 'Круїз контроль комплект Toyota',
-  },
-  {
-    id: 4,
-    category: 'Проблискові маячки',
-  },
-  {
-    id: 5,
-    category: 'Ручки перемикання передач',
-  },
-  {
-    id: 6,
-
-    category: 'Накладки на педалі',
-  },
-  {
-    id: 7,
-    category: 'Кнопки руля',
-  },
-  {
-    id: 8,
-    category: 'Модуль складання дзеркала',
-  },
-];
-
-const MenuCategories = ({ handleClick, showCategories }) => {
+const MenuCategories = ({ handleClick, data }) => {
   useEffect(() => {
     window.addEventListener('wheel', noScroll, { passive: false });
     window.addEventListener('keydown', onKeyDown);
@@ -64,19 +28,16 @@ const MenuCategories = ({ handleClick, showCategories }) => {
   };
   return (
     <>
-      <ListCategoriesContainer showCategories={showCategories}>
+      <ListCategoriesContainer>
         <ListCategories>
-          {list.map((item) => (
+          {data.map((item) => (
             <ItemCategories key={item.id}>
               <NavLinkStyled>{item.category}</NavLinkStyled>
             </ItemCategories>
           ))}
         </ListCategories>
       </ListCategoriesContainer>
-      <Backdrop
-        showCategories={showCategories}
-        onClick={handleClick}
-      ></Backdrop>
+      <Backdrop onClick={handleClick}></Backdrop>
     </>
   );
 };
