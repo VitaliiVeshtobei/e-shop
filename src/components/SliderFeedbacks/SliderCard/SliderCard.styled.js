@@ -40,7 +40,7 @@ export const Box = styled.div`
   background: ${(p) => p.theme.colors.smoke};
   border-radius: 19px;
   color: ${(p) => p.theme.colors.darkText};
-  height: 92px;
+  height: 125px;
 
   p {
     font-style: normal;
@@ -67,7 +67,7 @@ export const Box = styled.div`
       width: 2px;
       height: 4px;
       border-radius: 3px;
-      background-color: ${(p) => p.theme.blue};
+      background-color: ${(p) => p.theme.colors.darkText};
     }
   }
 `;
@@ -75,7 +75,7 @@ export const Box = styled.div`
 export const Div = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 17px;
+  margin-bottom: 10px;
 
   h3 {
     font-style: normal;
@@ -87,10 +87,10 @@ export const Div = styled.div`
 `;
 
 export const AvatarContainer = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   border: 2px dashed #eda415;
-  margin-right: 38px;
+  margin-right: 28px;
   padding: 7px;
   border-radius: 50%;
   display: flex;
@@ -100,5 +100,7 @@ export const AvatarContainer = styled.div`
 
   img {
     border-radius: 50%;
+    width: 60px;
+    height: 60px;
   }
 `;
