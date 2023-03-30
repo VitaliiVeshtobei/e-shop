@@ -1,6 +1,14 @@
 import React from 'react';
-import { TiShoppingCart } from 'react-icons/ti';
-import { ButtonStyled, Container, FormStyled, InputStyled, CartContainer } from './SearchStyled';
+import { IoCartOutline } from 'react-icons/io5';
+import {
+  ButtonStyled,
+  Container,
+  FormStyled,
+  InputStyled,
+  CartContainer,
+  NavLinkStyled,
+  CartCount,
+} from './SearchStyled';
 import logo from '../../../../assets/images/logo 1.png';
 
 const Search = () => {
@@ -23,8 +31,11 @@ const Search = () => {
         <ButtonStyled type="submit">Знайти</ButtonStyled>
       </FormStyled>
       <CartContainer>
-        <TiShoppingCart style={{ color: 'white', height: 24, width: 24 }} />
-        <p>Корзина</p>
+        <NavLinkStyled>
+          <IoCartOutline style={{ color: 'white', height: 24, width: 24 }} />
+          <CartCount>5</CartCount>
+          Корзина
+        </NavLinkStyled>
       </CartContainer>
     </Container>
   );

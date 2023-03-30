@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import { CiLocationOn, CiCalendar } from 'react-icons/ci';
 import { ModalWrapper } from '../../../Model/ModelWrapper/ModelWrapper';
-import { Container, ListLocation, ItemLocation } from './LocationStyled';
+import { Container, ListLocation, ItemLocation, LocationBtn } from './LocationStyled';
 
 const Location = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -22,13 +22,23 @@ const Location = () => {
     <Container>
       <p>Потрібна допомога? Зателефонуйте: +380 (66) 612-53-24</p>
       <ListLocation>
-        <ItemLocation onClick={() => openModal('location')}>
-          <CiLocationOn style={{ width: 24, height: 24 }} />
-          <p>Наш магазин</p>
+        <ItemLocation>
+          <LocationBtn
+            type="button"
+            onClick={() => openModal('location')}
+          >
+            <CiLocationOn />
+            Наш магазин
+          </LocationBtn>
         </ItemLocation>
-        <ItemLocation onClick={() => openModal('graphics')}>
-          <CiCalendar style={{ width: 24, height: 24 }} />
-          <p>Графік роботи</p>
+        <ItemLocation>
+          <LocationBtn
+            type="button"
+            onClick={() => openModal('graphics')}
+          >
+            <CiCalendar style={{ width: 24, height: 24 }} />
+            Графік роботи
+          </LocationBtn>
         </ItemLocation>
       </ListLocation>
       {isOpenModal && (

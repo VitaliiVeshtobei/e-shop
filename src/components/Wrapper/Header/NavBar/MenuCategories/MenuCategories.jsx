@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Backdrop, ItemCategories, ListCategories, ListCategoriesContainer } from './MenuCategoriesStyled';
+import {
+  Backdrop,
+  ItemCategories,
+  ListCategories,
+  ListCategoriesContainer,
+  NavLinkStyled,
+} from './MenuCategoriesStyled';
 
 const list = [
   {
@@ -63,9 +68,7 @@ const MenuCategories = ({ handleClick, showCategories }) => {
         <ListCategories>
           {list.map((item) => (
             <ItemCategories key={item.id}>
-              <NavLink>
-                <p>{item.category}</p>
-              </NavLink>
+              <NavLinkStyled>{item.category}</NavLinkStyled>
             </ItemCategories>
           ))}
         </ListCategories>

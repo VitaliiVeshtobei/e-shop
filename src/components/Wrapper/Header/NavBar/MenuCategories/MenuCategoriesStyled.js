@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const ListCategoriesContainer = styled('div')`
   position: absolute;
@@ -32,33 +33,35 @@ export const ListCategories = styled('ul')`
 `;
 
 export const ItemCategories = styled('li')`
-  cursor: pointer;
-
-  p::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    transition: width 800ms ease;
-    width: 0;
-    height: 3px;
-    background-color: ${(p) => p.theme.colors.accent};
+  transition: transform ${(p) => p.theme.transition};
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
   }
-
-  p:hover::after {
-    width: 100%;
-  }
-  p:focus::after {
-    width: 100%;
-  }
-  p {
-    position: relative;
-    display: inline;
-    color: ${(p) => p.theme.colors.darkText};
-  }
-
   &:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 24px;
+  }
+`;
+
+export const NavLinkStyled = styled(NavLink)`
+  position: relative;
+  color: ${(p) => p.theme.colors.darkText};
+  &::after {
+    content: '';
+    position: ${(p) => p.theme.line.position};
+    bottom: ${(p) => p.theme.line.bottom};
+    left: ${(p) => p.theme.line.left};
+    transition: ${(p) => p.theme.line.transition};
+    width: ${(p) => p.theme.line.width};
+    height: ${(p) => p.theme.line.height};
+    background-color: ${(p) => p.theme.line.bgColor};
+  }
+
+  &:hover::after {
+    width: ${(p) => p.theme.lineHover.width};
+  }
+  &:focus::after {
+    width: ${(p) => p.theme.lineHover.width};
   }
 `;
 

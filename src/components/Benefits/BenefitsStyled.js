@@ -17,6 +17,16 @@ export const List = styled('ul')`
   li {
     display: flex;
     align-items: center;
+    &:first-child svg {
+      fill: transparent;
+      stroke: ${(p) => p.theme.colors.accent};
+    }
+    svg {
+      width: 67px;
+      height: 67px;
+      fill: ${(p) => p.theme.colors.accent};
+      margin-right: 31px;
+    }
     h3 {
       margin-bottom: 6px;
       font-weight: 600;
@@ -31,8 +41,4 @@ export const List = styled('ul')`
       color: ${(p) => p.theme.colors.lightText};
     }
   }
-`;
-
-export const SvgContainer = styled('div')`
-  margin-right: 31px;
 `;
