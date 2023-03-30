@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import MenuCategories from './MenuCategories/MenuCategories';
-import { ButtonCategories, Container, ListContainer, NavLinkStyled, TextStyled } from './NavBarStyled';
+import { ButtonCategories, Container, ListContainer, TextStyled, ItemContainer } from './NavBarStyled';
 
 const NavBar = () => {
   const [showCategories, setShowCategories] = useState(false);
@@ -17,24 +18,41 @@ const NavBar = () => {
           Каталог товарів
         </ButtonCategories>
         <ListContainer>
-          <NavLinkStyled>
-            <TextStyled>Головна</TextStyled>
-          </NavLinkStyled>
-          <NavLinkStyled>
-            <TextStyled>Всі товари</TextStyled>
-          </NavLinkStyled>
-          <NavLinkStyled>
-            <TextStyled>Відгуки</TextStyled>
-          </NavLinkStyled>
-          <NavLinkStyled>
-            <TextStyled>Контакти</TextStyled>
-          </NavLinkStyled>
-          <NavLinkStyled>
-            <TextStyled>Про нас</TextStyled>
-          </NavLinkStyled>
-          <NavLinkStyled>
-            <TextStyled>Доставка і оплата</TextStyled>
-          </NavLinkStyled>
+          <ItemContainer>
+            <NavLink>
+              <TextStyled>Головна</TextStyled>
+            </NavLink>
+          </ItemContainer>
+
+          <ItemContainer>
+            <NavLink>
+              <TextStyled>Всі товари</TextStyled>
+            </NavLink>
+          </ItemContainer>
+
+          <ItemContainer>
+            <NavLink>
+              <TextStyled>Відгуки</TextStyled>
+            </NavLink>
+          </ItemContainer>
+
+          <ItemContainer>
+            <NavLink>
+              <TextStyled>Контакти</TextStyled>
+            </NavLink>
+          </ItemContainer>
+
+          <ItemContainer>
+            <NavLink>
+              <TextStyled>Про нас</TextStyled>
+            </NavLink>
+          </ItemContainer>
+
+          <ItemContainer>
+            <NavLink>
+              <TextStyled>Доставка і оплата</TextStyled>
+            </NavLink>
+          </ItemContainer>
         </ListContainer>
       </Container>
       {showCategories && (

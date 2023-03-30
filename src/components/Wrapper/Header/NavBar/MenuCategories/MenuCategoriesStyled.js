@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import { NavLink } from 'react-router-dom';
 
 export const ListCategoriesContainer = styled('div')`
   position: absolute;
@@ -7,12 +6,25 @@ export const ListCategoriesContainer = styled('div')`
   margin-left: 63px;
   overflow: hidden;
   box-sizing: border-box;
-  transition: height ${(p) => p.theme.transition};
-  height: ${(p) => (p.showCategories ? '100%' : '0')};
+
   width: 375px;
+  animation-name: categories;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+
+  @keyframes categories {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 export const ListCategories = styled('ul')`
+  font-size: 20px;
   background-color: ${(p) => p.theme.colors.navbar};
   padding: 30px;
   border: 0.983537px solid ${(p) => p.theme.colors.border};
@@ -21,18 +33,32 @@ export const ListCategories = styled('ul')`
 
 export const ItemCategories = styled('li')`
   cursor: pointer;
+
+  p::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: width 800ms ease;
+    width: 0;
+    height: 3px;
+    background-color: ${(p) => p.theme.colors.accent};
+  }
+
+  p:hover::after {
+    width: 100%;
+  }
+  p:focus::after {
+    width: 100%;
+  }
   p {
-    transition: ${(p) => p.theme.transition};
-    &:hover,
-    &:focus {
-      transform: scale(1.05);
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #eda415, 0 0 30px #eda415, 0 0 40px #eda415,
-        0 0 55px #eda415, 0 0 75px #eda415, 2px 2px 2px rgba(237, 164, 21, 0);
-    }
+    position: relative;
+    display: inline;
     color: ${(p) => p.theme.colors.darkText};
   }
+
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 `;
 
@@ -40,12 +66,22 @@ export const Backdrop = styled.div`
   z-index: 1;
   position: absolute;
   left: 0;
-  height: ${(p) => (p.showCategories ? '100%' : '0')};
+  height: 100%;
   width: 100%;
 
   background-color: rgba(0, 0, 0, 0.4);
 
-  transition: opacity 6000ms ease 0s, height 400ms ease 0s;
+  animation-name: backdrop;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 
-  opacity: ${(p) => (p.showCategories ? '1' : '0')};
+  @keyframes backdrop {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
