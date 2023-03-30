@@ -1,38 +1,40 @@
 import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { Backdrop, ItemCategories, ListCategories, ListCategoriesContainer } from './MenuCategoriesStyled';
 
 const list = [
   {
     id: 1,
-    category: 'Tablet as a laptop',
+    category: 'Підрульові шлейфи',
   },
   {
     id: 2,
-    category: 'Wireless headphones',
+    category: 'Бризговики автомобільні',
   },
   {
     id: 3,
-    category: 'Tablet as a laptop',
+    category: 'Круїз контроль комплект Toyota',
   },
   {
     id: 4,
-    category: 'Wireless headphones',
+    category: 'Проблискові маячки',
   },
   {
     id: 5,
-    category: 'Tablet as a laptop',
+    category: 'Ручки перемикання передач',
   },
   {
     id: 6,
-    category: 'Wireless headphones',
+
+    category: 'Накладки на педалі',
   },
   {
     id: 7,
-    category: 'Tablet as a laptop',
+    category: 'Кнопки руля',
   },
   {
     id: 8,
-    category: 'Tablet as a laptop',
+    category: 'Модуль складання дзеркала',
   },
 ];
 
@@ -61,7 +63,9 @@ const MenuCategories = ({ handleClick, showCategories }) => {
         <ListCategories>
           {list.map((item) => (
             <ItemCategories key={item.id}>
-              <p>{item.category}</p>
+              <NavLink>
+                <p>{item.category}</p>
+              </NavLink>
             </ItemCategories>
           ))}
         </ListCategories>

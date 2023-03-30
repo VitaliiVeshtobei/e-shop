@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 
 export const Container = styled('div')`
-  /* position: relative; */
   display: flex;
   gap: 100px;
   align-items: center;
@@ -38,7 +36,7 @@ export const ListContainer = styled('ul')`
   gap: 30px;
 `;
 
-export const NavLinkStyled = styled(NavLink)`
+export const ItemContainer = styled('li')`
   cursor: pointer;
 `;
 
