@@ -6,7 +6,6 @@ import {
   Container,
   LogoContainer,
   ListIconsStyled,
-  // ListTextStyled,
   CategoriesContainer,
   TitleCategories,
   ListCategories,
@@ -72,33 +71,6 @@ const Footer = () => {
             ))}
           </ListCategories>
         </CategoriesContainer>
-
-        {/* <ListTextStyled>
-          <li>
-            <span>Find product</span>
-            <p>Brownze arnold</p>
-            <p>Chronograph blue</p>
-            <p>Smart phones</p>
-            <p>Automatic watch</p>
-            <p>Hair straighteners</p>
-          </li>
-          <li>
-            <span>Get help</span>
-            <p>About us</p>
-            <p>Contact us</p>
-            <p>Return policy</p>
-            <p>Privacy policy</p>
-            <p>Payment policy</p>
-          </li>
-          <li>
-            <span>About us</span>
-            <p>News</p>
-            <p>Service</p>
-            <p>Our policy</p>
-            <p>Custmer care</p>
-            <p>Faq’s</p>
-          </li>
-        </ListTextStyled> */}
 
         <ContactsContainer>
           <ContactsList>

@@ -35,45 +35,8 @@ export const LogoContainer = styled('div')`
   }
 `;
 
-// export const ListTextStyled = styled('ul')`
-//   list-style: none;
-//   display: flex;
-//   justify-content: center;
-//   gap: 227px;
-//   li > span {
-//     display: block;
-//     font-family: 'Poppins-SemiBold';
-//     font-weight: 600;
-//     font-size: 19.38px;
-//     line-height: 29px;
-//     color: #1b5a7d;
-//     margin-bottom: 13px;
-//   }
-//   li > p {
-//     display: flex;
-//     align-items: center;
-//     font-weight: 400;
-//     font-size: 19.38px;
-//     line-height: 29px;
-//     color: #1b5a7d;
-//     &:not(:last-child) {
-//       margin-bottom: 15px;
-//     }
-//     ::before {
-//       /* position: absolute; */
-//       content: '';
-//       display: block;
-//       border-radius: 50%;
-//       margin-right: 15px;
-//       width: 10px;
-//       height: 10px;
-//       background-color: #d9d9d9;
-//     }
-//   }
-// `;
-
 export const CategoriesContainer = styled('div')`
-  /* margin-right: 190px; */
+  width: 450px;
 `;
 export const TitleCategories = styled('p')`
   margin-bottom: 21px;
@@ -132,7 +95,7 @@ export const ContactsItem = styled.li`
     stroke-width: 1px;
   }
   p {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 20px;
     line-height: 1.25;
     color: ${(p) => p.theme.colors.smoke};
