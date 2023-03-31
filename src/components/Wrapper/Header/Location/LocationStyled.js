@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import DEVICE from '../../../../constants/deviceSize';
 
 export const Container = styled('div')`
   display: flex;
@@ -10,12 +11,34 @@ export const Container = styled('div')`
   font-size: 14px;
   line-height: 21px;
   color: ${(p) => p.theme.colors.darkText};
+  @media ${DEVICE.moble} {
+    padding: 20px;
+  }
+  @media ${DEVICE.tablet} {
+    padding: 0 50px;
+  }
+  p span {
+    @media ${DEVICE.moble} {
+      display: none;
+    }
+    @media ${DEVICE.tablet} {
+      display: block;
+    }
+  }
 `;
 
 export const ListLocation = styled('ul')`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  span {
+    @media ${DEVICE.moble} {
+      display: none;
+    }
+    @media ${DEVICE.tablet} {
+      display: block;
+    }
+  }
 `;
 
 export const ItemLocation = styled('li')`

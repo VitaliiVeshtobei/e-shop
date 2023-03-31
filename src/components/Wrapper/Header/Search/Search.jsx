@@ -8,6 +8,7 @@ import {
   CartContainer,
   NavLinkStyled,
   CartCount,
+  LogoContainer,
 } from './SearchStyled';
 import logo from '../../../../assets/images/logo 1.png';
 
@@ -17,12 +18,12 @@ const Search = () => {
   };
   return (
     <Container>
-      <div>
+      <LogoContainer>
         <img
           src={logo}
           alt="logo"
         />
-      </div>
+      </LogoContainer>
       <FormStyled onSubmit={handlerSubmit}>
         <InputStyled
           type="text"
@@ -34,7 +35,7 @@ const Search = () => {
         <NavLinkStyled>
           <IoCartOutline style={{ color: 'white', height: 24, width: 24 }} />
           <CartCount>5</CartCount>
-          Корзина
+          <span>Корзина</span>
         </NavLinkStyled>
       </CartContainer>
     </Container>

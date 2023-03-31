@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import DEVICE from '../../../../constants/deviceSize';
 
 export const Container = styled('div')`
   display: flex;
@@ -7,6 +8,14 @@ export const Container = styled('div')`
   justify-content: space-around;
   height: 100px;
   background-color: ${(p) => p.theme.colors.accentBg};
+`;
+export const LogoContainer = styled('div')`
+  @media ${DEVICE.mobile} {
+    display: none;
+  }
+  @media ${DEVICE.tablet} {
+    display: block;
+  }
 `;
 
 export const FormStyled = styled('form')`
@@ -16,16 +25,26 @@ export const InputStyled = styled('input')`
   width: 438px;
   height: 56px;
   padding: 17px 25px;
-  /* background: ${(p) => p.theme.colors.lightText}; */
   border-radius: 20px;
   border: none;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+
   :focus {
     outline: none;
     border: none;
+  }
+  @media ${DEVICE.mobile} {
+    max-width: 250px;
+    height: 20px;
+  }
+  @media ${DEVICE.tablet} {
+    max-width: 360px;
+  }
+  @media ${DEVICE.laptop} {
+    max-width: 438px;
   }
 `;
 
@@ -33,7 +52,7 @@ export const ButtonStyled = styled('button')`
   position: absolute;
   right: 0px;
   width: 132px;
-  height: 56px;
+  height: 100%;
   background: ${(p) => p.theme.colors.accent};
   border-radius: 20px;
   border: none;
@@ -47,6 +66,15 @@ export const ButtonStyled = styled('button')`
   &:hover,
   &:focus {
     box-shadow: 0px 3px 26px -1px ${(p) => p.theme.colors.darkHover};
+  }
+  @media ${DEVICE.mobile} {
+    width: 70px;
+  }
+  @media ${DEVICE.tablet} {
+    width: 100px;
+  }
+  @media ${DEVICE.laptop} {
+    width: 132px;
   }
 `;
 
@@ -83,6 +111,15 @@ export const NavLinkStyled = styled(NavLink)`
   }
   &:focus::after {
     width: ${(p) => p.theme.lineHover.width};
+  }
+
+  span {
+    @media ${DEVICE.mobile} {
+      display: none;
+    }
+    @media ${DEVICE.tablet} {
+      display: block;
+    }
   }
 `;
 

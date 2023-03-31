@@ -20,7 +20,9 @@ const Location = () => {
 
   return (
     <Container>
-      <p>Потрібна допомога? Зателефонуйте: +380 (66) 612-53-24</p>
+      <p>
+        <span>Потрібна допомога? Зателефонуйте: </span>+380 (66) 612-53-24
+      </p>
       <ListLocation>
         <ItemLocation>
           <LocationBtn
@@ -28,7 +30,7 @@ const Location = () => {
             onClick={() => openModal('location')}
           >
             <CiLocationOn />
-            Наш магазин
+            <span>Наш магазин</span>
           </LocationBtn>
         </ItemLocation>
         <ItemLocation>
@@ -37,7 +39,7 @@ const Location = () => {
             onClick={() => openModal('graphics')}
           >
             <CiCalendar style={{ width: 24, height: 24 }} />
-            Графік роботи
+            <span>Графік роботи</span>
           </LocationBtn>
         </ItemLocation>
       </ListLocation>

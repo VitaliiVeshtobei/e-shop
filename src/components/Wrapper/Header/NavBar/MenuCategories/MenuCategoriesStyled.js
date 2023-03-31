@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-
+import DEVICE from '../../../../../constants/deviceSize';
 export const ListCategoriesContainer = styled('div')`
   position: absolute;
   z-index: 2;
@@ -21,6 +21,10 @@ export const ListCategoriesContainer = styled('div')`
     100% {
       opacity: 1;
     }
+  }
+  @media ${DEVICE.mobile} {
+    margin: 0;
+    width: 100%;
   }
 `;
 

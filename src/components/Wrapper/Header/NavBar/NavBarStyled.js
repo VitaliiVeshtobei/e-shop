@@ -1,16 +1,32 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import DEVICE from '../../../../constants/deviceSize';
 
 export const Container = styled('div')`
   display: flex;
-  gap: 100px;
+
   align-items: center;
-  padding: 0 63px;
+
   height: 70px;
   background-color: ${(p) => p.theme.colors.navbar};
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  @media ${DEVICE.mobile} {
+    gap: 0;
+    padding: 0;
+    justify-content: space-evenly;
+  }
+  @media ${DEVICE.tablet} {
+    button:nth-last-child(2) {
+      display: none;
+    }
+  }
+  @media ${DEVICE.laptop} {
+    gap: 100px;
+    padding: 0 63px;
+    justify-content: start;
+  }
 `;
 
 export const ButtonCategories = styled('button')`
@@ -34,7 +50,18 @@ export const ButtonCategories = styled('button')`
 export const ListContainer = styled('ul')`
   display: flex;
   align-items: center;
-  gap: 30px;
+
+  @media ${DEVICE.mobile} {
+    display: none;
+  }
+  @media ${DEVICE.tablet} {
+    display: flex;
+    gap: 15px;
+  }
+  @media ${DEVICE.laptop} {
+    display: flex;
+    gap: 30px;
+  }
 `;
 
 export const ItemContainer = styled('li')`
