@@ -32,7 +32,7 @@ const MenuCategories = ({ handleClick, data }) => {
         <ListCategories>
           {data.map((item) => (
             <ItemCategories key={item.id}>
-              <NavLinkStyled>{item.category}</NavLinkStyled>
+              <NavLinkStyled>{item.name_multilang.uk}</NavLinkStyled>
             </ItemCategories>
           ))}
         </ListCategories>
