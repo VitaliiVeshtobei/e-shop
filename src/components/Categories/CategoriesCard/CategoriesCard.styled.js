@@ -34,6 +34,6 @@ export const Item = styled(NavLink)`
 
 export const Img = styled.img`
   box-sizing: border-box;
-  width: 100%;
+  /* width: 100%; */
   margin-bottom: 10px;
 `;
