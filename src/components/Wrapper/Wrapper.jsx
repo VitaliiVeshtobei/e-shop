@@ -7,11 +7,11 @@ import { Container } from './WrapperStyled';
 export default function Wrapper() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Container>
         <Outlet></Outlet>
       </Container>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

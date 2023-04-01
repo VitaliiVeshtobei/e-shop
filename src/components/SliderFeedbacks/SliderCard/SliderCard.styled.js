@@ -2,9 +2,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Item = styled.li`
-  width: 440px;
-  height: 242px;
-  margin: 10px;
+  margin: 10px 10px 20px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +15,6 @@ export const LinkItem = styled(NavLink)`
   height: 100%;
   text-decoration: none;
   padding: 16px;
-  overflow: hidden;
   border: 1px solid ${(p) => p.theme.colors.border};
 
   border-radius: 20px;
@@ -28,8 +25,8 @@ export const LinkItem = styled(NavLink)`
   &:hover,
   &:focus {
     transform: scale(1.03);
-    -webkit-box-shadow: 0px 3px 12px -1px ${(p) => p.theme.colors.darkHover};
-    box-shadow: 0px 3px 12px -1px ${(p) => p.theme.colors.darkHover};
+    -webkit-box-shadow: 0px 2px 6px -1px ${(p) => p.theme.colors.darkHover};
+    box-shadow: 0px 2px 6px -1px ${(p) => p.theme.colors.darkHover};
     outline: transparent;
   }
 `;

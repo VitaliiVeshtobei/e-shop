@@ -6,22 +6,29 @@ export const Wrapper = styled.section`
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 903px) {
+  }
 `;
 
 export const ImageContainer = styled.div`
-  position: relative;
+  position: absolute;
   background-image: url(${(p) => p.src});
+  background-size: content;
+  width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
+
+  opacity: 0;
+  transition: opacity ease-in-out 1.5s;
+  ${(p) => (p.anime ? `opacity: 1;` : 'opacity: 0;')}
 `;
 
 export const Div = styled.div`
   width: 420px;
-
-  @media screen and (min-width: 419px) {
-    height: 325px;
-  }
+  position: relative;
+  overflow: hidden;
 `;
 
 export const ContainerPrice = styled.div`
@@ -121,13 +128,14 @@ export const ButtonContainer = styled.div`
 
 export const SlideBtnContainer = styled.div`
   display: flex;
-  margin-left: 120px;
+  padding: 10px;
 `;
 
 export const ButtonSlide = styled.button`
   cursor: pointer;
   width: 16px;
   height: 16px;
+  background: ${(p) => (p.dot ? p.theme.colors.accent : `transparent`)};
   border: 1px solid ${(p) => p.theme.colors.corrasion};
   border-radius: 50%;
   transition: transform ${(p) => p.theme.transition}, box-shadow ${(p) => p.theme.transition},
