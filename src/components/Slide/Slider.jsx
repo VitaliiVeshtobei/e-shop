@@ -10,6 +10,7 @@ import {
   ButtonSlide,
   SlideBtnContainer,
   Div,
+  SlideContainer,
 } from './Slider.styled';
 import image from '../../assets/images/Camera.png';
 import image2 from '../../assets/images/Frame29.png';
@@ -45,6 +46,7 @@ export const Slider = () => {
   useEffect(() => {
     const newTimeoutId = setTimeout(() => {
       if (slideIndex === dataSlider.length) {
+        console.log(slideIndex);
         setSlideIndex(1);
       } else {
         setSlideIndex(slideIndex + 1);
@@ -56,6 +58,7 @@ export const Slider = () => {
   }, [slideIndex]);
 
   const moveDot = (index) => {
+    console.log(index);
     setSlideIndex(index);
     if (timeoutId) {
       clearTimeout(timeoutId);
@@ -83,7 +86,7 @@ export const Slider = () => {
           ))}
         </SlideBtnContainer>
       </Div>
-      <Div>
+      <SlideContainer>
         {dataSlider.map((item, index) => {
           return slideIndex === index + 1 ? (
             <ImageContainer
@@ -109,7 +112,7 @@ export const Slider = () => {
             </ImageContainer>
           );
         })}
-      </Div>
+      </SlideContainer>
     </Wrapper>
   );
 };

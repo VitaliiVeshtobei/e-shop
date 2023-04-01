@@ -1,3 +1,4 @@
+import Slider from 'react-slick';
 import { SliderCard } from './SliderCard/SliderCard';
 import { SlideBtnContainer, Wrapper } from './SliderFeedbacks.styled';
 import image1 from '../../assets/images/feedback/Ellipse 2.jpg';
@@ -7,7 +8,6 @@ import { memo } from 'react';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Slider from 'react-slick';
 
 const listFeedback = [
   {
@@ -151,7 +151,6 @@ export const SliderFeedbacks = memo(
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
-            dots: true,
           },
         },
         {
@@ -159,15 +158,13 @@ export const SliderFeedbacks = memo(
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            dots: true,
           },
         },
         {
-          breakpoint: 767,
+          breakpoint: 550,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            dots: false,
           },
         },
       ],
