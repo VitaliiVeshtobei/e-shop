@@ -11,6 +11,9 @@ module.exports = function (app) {
       pathRewrite: {
         '^/api': '/api/v1',
       },
+      onProxyReq: (proxyReq) => {
+        proxyReq.setHeader('accept', 'application/json');
+      },
     })
   );
 };
