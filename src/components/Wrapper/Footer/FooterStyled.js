@@ -1,68 +1,144 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import DEVICE from '../../../constants/deviceSize';
+const { tablet, laptop } = DEVICE;
 
-export const FooterContainer = styled('div')`
-  height: 270px;
+export const FooterContainer = styled.div`
+  height: 600px;
   background-color: ${(p) => p.theme.colors.accentBg};
-  padding: 25px 60px;
+  padding: 25px 30px;
+  @media ${tablet} {
+    height: 400px;
+  }
+  @media screen and (min-width: 950px) {
+    padding: 25px 60px;
+    height: 270px;
+  }
 `;
 
-export const Container = styled('div')`
+export const Container = styled.div`
   display: flex;
-  height: 216px;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+
+  @media ${tablet} {
+    flex-direction: row;
+  }
 `;
 
-export const LogoContainer = styled('div')`
-  /* margin-right: 100px; */
+export const LogoContainer = styled.div`
   img {
     margin-bottom: 40px;
   }
-  p {
+`;
+
+export const LogoText = styled.p`
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.25;
+  color: ${(p) => p.theme.colors.lightText};
+  ::after {
+    content: '';
+    margin-top: 36px;
+    margin-bottom: 25px;
+    display: block;
+    width: 100%;
+    border: 1px solid ${(p) => p.theme.colors.border};
+  }
+
+  @media ${tablet} {
+    font-size: 18px;
+    width: 220px;
+  }
+
+  @media screen and (min-width: 950px) {
+    width: 280px;
+  }
+  @media ${laptop} {
     width: 310px;
-    font-weight: 400;
     font-size: 20px;
-    line-height: 25px;
-    color: ${(p) => p.theme.colors.lightText};
-    ::after {
-      content: '';
-      margin-top: 36px;
-      margin-bottom: 25px;
-      display: block;
-      width: 100%;
-      border: 1px solid ${(p) => p.theme.colors.border};
-    }
   }
 `;
 
-export const CategoriesContainer = styled('div')`
-  width: 450px;
+export const CategoriesContainer = styled.div`
+  /* width: 190px; */
+  width: 100%;
+  @media ${tablet} {
+    width: 200px;
+  }
+  @media screen and (min-width: 950px) {
+    width: 300px;
+  }
+  @media ${laptop} {
+    width: 450px;
+  }
 `;
 
-export const TitleCategories = styled('p')`
+export const TitleCategories = styled.p`
   margin-bottom: 21px;
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 29px;
   color: ${(p) => p.theme.colors.accent};
+  text-align: center;
+
+  @media ${tablet} {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 950px) {
+    text-align: start;
+  }
+
+  @media ${laptop} {
+    font-size: 20px;
+  }
 `;
 
-export const ListCategories = styled('ul')`
-  height: 140px;
+export const ListCategories = styled.ul`
+  /* height: 140px; */
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   flex-direction: column;
-  li {
-    transition: transform ${(p) => p.theme.transition};
-    &:hover,
-    &:focus {
-      transform: scale(1.05);
+
+  @media screen and (max-width: 767px) {
+    height: 100px;
+  }
+
+  @media screen and (min-width: 950px) {
+    align-items: start;
+    height: 140px;
+  }
+`;
+
+export const CategoriesItem = styled.li`
+  transition: transform ${(p) => p.theme.transition};
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &:not(:nth-last-child(-n + 3)) {
+    margin-right: 22px;
+  }
+  @media ${tablet} {
+    &:not(:nth-last-child(-n + 3)) {
+      margin-right: 0;
     }
+
     &:not(:last-child) {
       margin-bottom: 15px;
     }
+  }
+
+  @media ${laptop} {
     &:not(:nth-last-child(-n + 3)) {
       margin-right: 150px;
     }
@@ -71,7 +147,7 @@ export const ListCategories = styled('ul')`
 
 export const CategoriesLink = styled(NavLink)`
   font-weight: 400;
-  font-size: 19px;
+  font-size: 15px;
   line-height: 1.52;
   color: ${(p) => p.theme.colors.lightText};
   position: relative;
@@ -92,6 +168,13 @@ export const CategoriesLink = styled(NavLink)`
   &:focus::after {
     width: ${(p) => p.theme.lineHover.width};
   }
+  @media ${tablet} {
+    font-size: 17px;
+  }
+
+  @media ${laptop} {
+    font-size: 19px;
+  }
 `;
 
 export const ContactsContainer = styled.div``;
@@ -108,22 +191,37 @@ export const ContactsItem = styled.li`
   a {
     display: flex;
     position: relative;
-    font-size: 19px;
+    font-size: 15px;
     line-height: 1.25;
     color: ${(p) => p.theme.colors.lightText};
+    @media ${tablet} {
+      font-size: 17px;
+    }
+    @media ${laptop} {
+      font-size: 19px;
+    }
   }
   svg {
-    margin-right: 16px;
-    width: 30px;
-    height: 30px;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
     stroke: ${(p) => p.theme.colors.smoke};
     stroke-width: 1px;
-  }
-  p {
+
+    @media ${tablet} {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media ${laptop} {
+      width: 30px;
+      margin-right: 16px;
+      height: 30px;
+    }
   }
 `;
 
-export const ListIconsStyled = styled('ul')`
+export const ListIconsStyled = styled.ul`
   list-style: none;
   display: flex;
   justify-content: start;
@@ -159,7 +257,11 @@ export const ListIconsLink = styled.a`
   }
 
   svg {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
+    @media ${laptop} {
+      width: 30px;
+      height: 30px;
+    }
   }
 `;

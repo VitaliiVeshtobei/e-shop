@@ -14,6 +14,8 @@ import {
   ContactsItem,
   ListIconsLink,
   CategoriesLink,
+  LogoText,
+  CategoriesItem,
 } from './FooterStyled';
 import logoFooter from '../../../assets/images/logo-footer.png';
 
@@ -59,16 +61,16 @@ const Footer = () => {
             src={logoFooter}
             alt="logo-footer"
           />
-          <p>Privat-auto — Інтернет магазин автозапчастин та аксессуарів</p>
+          <LogoText>Privat-auto — Інтернет магазин автозапчастин та аксессуарів</LogoText>
         </LogoContainer>
 
         <CategoriesContainer>
           <TitleCategories>Карта сайту</TitleCategories>
           <ListCategories>
             {list.map((item) => (
-              <li key={item.id}>
+              <CategoriesItem key={item.id}>
                 <CategoriesLink>{item.category}</CategoriesLink>
-              </li>
+              </CategoriesItem>
             ))}
           </ListCategories>
         </CategoriesContainer>
