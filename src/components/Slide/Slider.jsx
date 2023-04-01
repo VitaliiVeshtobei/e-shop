@@ -13,7 +13,7 @@ import {
   SlideContainer,
 } from './Slider.styled';
 import image from '../../assets/images/Camera.png';
-import image2 from '../../assets/images/Frame29.png';
+import image2 from '../../assets/images/bgLights.jpg';
 import image3 from '../../assets/images/Frame.png';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -46,19 +46,17 @@ export const Slider = () => {
   useEffect(() => {
     const newTimeoutId = setTimeout(() => {
       if (slideIndex === dataSlider.length) {
-        console.log(slideIndex);
         setSlideIndex(1);
       } else {
         setSlideIndex(slideIndex + 1);
       }
-    }, 5000);
+    }, 10000);
     setTimeoutId(newTimeoutId);
 
     return () => clearTimeout(newTimeoutId);
   }, [slideIndex]);
 
   const moveDot = (index) => {
-    console.log(index);
     setSlideIndex(index);
     if (timeoutId) {
       clearTimeout(timeoutId);

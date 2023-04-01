@@ -20,6 +20,7 @@ export const ImageContainer = styled.div`
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   transition: opacity ease-in-out 1s;
 
   ${(p) => (p.anime ? `opacity: 1;` : 'opacity: 0;')};
