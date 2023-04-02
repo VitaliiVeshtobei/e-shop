@@ -11,18 +11,21 @@ export const Container = styled('div')`
   font-size: 14px;
   line-height: 21px;
   color: ${(p) => p.theme.colors.darkText};
-  @media ${DEVICE.moble} {
+  @media ${DEVICE.mobile} {
+    height: 50px;
     padding: 20px;
   }
   @media ${DEVICE.tablet} {
-    padding: 0 50px;
   }
   p span {
-    @media ${DEVICE.moble} {
+    @media ${DEVICE.mobile} {
       display: none;
     }
     @media ${DEVICE.tablet} {
       display: block;
+    }
+    @media ${DEVICE.laptop} {
+      display: inline;
     }
   }
 `;
@@ -32,12 +35,15 @@ export const ListLocation = styled('ul')`
   align-items: center;
   justify-content: space-around;
   span {
-    @media ${DEVICE.moble} {
+    @media ${DEVICE.mobile} {
       display: none;
     }
     @media ${DEVICE.tablet} {
       display: block;
     }
+    /* @media ${DEVICE.laptop} {
+      display: inline;
+    } */
   }
 `;
 

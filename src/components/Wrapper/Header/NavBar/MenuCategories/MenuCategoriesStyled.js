@@ -4,7 +4,7 @@ import DEVICE from '../../../../../constants/deviceSize';
 export const ListCategoriesContainer = styled('div')`
   position: absolute;
   z-index: 2;
-  margin-left: 63px;
+
   overflow: hidden;
   box-sizing: border-box;
 
@@ -25,6 +25,14 @@ export const ListCategoriesContainer = styled('div')`
   @media ${DEVICE.mobile} {
     margin: 0;
     width: 100%;
+  }
+  @media ${DEVICE.tablet} {
+    margin-left: 63px;
+    width: 375px;
+  }
+  @media ${DEVICE.laptop} {
+    margin-left: 63px;
+    width: 375px;
   }
 `;
 
