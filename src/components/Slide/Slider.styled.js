@@ -35,6 +35,9 @@ export const Div = styled.div`
   @media screen and (max-width: 903px) {
     width: 320px;
   }
+  @media screen and (max-width: 420px) {
+    width: 100%;
+  }
 `;
 export const SlideContainer = styled.div`
   position: relative;
@@ -44,6 +47,9 @@ export const SlideContainer = styled.div`
   @media screen and (max-width: 903px) {
     height: 304px;
     width: 320px;
+  }
+  @media screen and (max-width: 420px) {
+    width: 100%;
   }
 `;
 
