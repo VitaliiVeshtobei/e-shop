@@ -15,9 +15,10 @@ export const Container = styled('div')`
   @media ${DEVICE.mobile} {
     gap: 0;
     padding: 0;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   @media ${DEVICE.tablet} {
+    justify-content: space-evenly;
     button:nth-last-child(2) {
       display: none;
     }
