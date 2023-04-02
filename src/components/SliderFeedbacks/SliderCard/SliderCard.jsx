@@ -1,8 +1,8 @@
 import { LinkItem, Item, Div, AvatarContainer, Box } from './SliderCard.styled';
 
-export const SliderCard = ({ name, feedback, avatar }) => {
+export const SliderCard = ({ name, feedback, avatar, anime }) => {
   return (
-    <Item>
+    <Item anime={anime}>
       <LinkItem>
         <Div>
           <AvatarContainer>

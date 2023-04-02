@@ -2,6 +2,18 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.section`
   margin-top: 75px;
+  & .slick-prev,
+  & .slick-next {
+    width: 30px;
+    height: 50px;
+  }
+  & .slick-prev::before,
+  & .slick-next::before {
+    width: 100%;
+    height: 100%;
+    color: ${(p) => p.theme.colors.border};
+    opacity: 1.2;
+  }
 `;
 
 export const List = styled.ul`
