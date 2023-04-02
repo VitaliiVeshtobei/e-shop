@@ -7,7 +7,7 @@ import {
   NavLinkStyled,
 } from './MenuCategoriesStyled';
 
-const MenuCategories = ({ handleClick, data }) => {
+const MenuCategories = ({ handleClick, data, nameButton }) => {
   useEffect(() => {
     window.addEventListener('wheel', noScroll, { passive: false });
     window.addEventListener('keydown', onKeyDown);
@@ -32,7 +32,7 @@ const MenuCategories = ({ handleClick, data }) => {
         <ListCategories>
           {data.map((item) => (
             <ItemCategories key={item.id}>
-              <NavLinkStyled>{item.name_multilang.uk}</NavLinkStyled>
+              <NavLinkStyled>{nameButton === 'Menu' ? item.category : item.name_multilang.uk}</NavLinkStyled>
             </ItemCategories>
           ))}
         </ListCategories>

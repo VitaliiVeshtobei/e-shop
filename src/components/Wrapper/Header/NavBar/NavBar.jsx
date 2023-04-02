@@ -75,6 +75,7 @@ const NavBar = () => {
 
   const handleClick = (e) => {
     const btn = e.target.name;
+    if (showCategories && btn !== nameButton) return;
     setNameButton(btn);
     setShowCategories((prev) => !prev);
   };
@@ -107,6 +108,7 @@ const NavBar = () => {
         <MenuCategories
           handleClick={handleClick}
           data={nameButton === 'Menu' ? menu : data}
+          nameButton={nameButton}
         />
       )}
     </>
