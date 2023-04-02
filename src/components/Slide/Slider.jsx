@@ -2,19 +2,19 @@ import { v4 as uuidv4 } from 'uuid';
 import {
   ImageContainer,
   Wrapper,
-  ContainerPrice,
-  Title,
-  Button,
-  ButtonView,
-  ButtonContainer,
-  ButtonSlide,
-  SlideBtnContainer,
-  Div,
+  // ContainerPrice,
+  // Title,
+  // Button,
+  // ButtonView,
+  // ButtonContainer,
+  // ButtonSlide,
+  // SlideBtnContainer,
+  // Div,
   SlideContainer,
 } from './Slider.styled';
-import image from '../../assets/images/Camera.png';
+import image from '../../assets/images/Ukraine.jpg';
 import image2 from '../../assets/images/bgLights.jpg';
-import image3 from '../../assets/images/Frame.png';
+
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -31,41 +31,38 @@ const dataSlider = [
     subTitle: 'Lorem',
     img: image,
   },
-  {
-    id: uuidv4(),
-    title: 'Lorem ipsum',
-    subTitle: 'Lorem',
-    img: image3,
-  },
 ];
 
 export const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(1);
   const [timeoutId, setTimeoutId] = useState(null);
+  const isSmallScreen = window.matchMedia('(max-width: 320px)').matches;
 
   useEffect(() => {
-    const newTimeoutId = setTimeout(() => {
-      if (slideIndex === dataSlider.length) {
-        setSlideIndex(1);
-      } else {
-        setSlideIndex(slideIndex + 1);
-      }
-    }, 10000);
-    setTimeoutId(newTimeoutId);
+    if (!isSmallScreen) {
+      const newTimeoutId = setTimeout(() => {
+        if (slideIndex === dataSlider.length) {
+          setSlideIndex(1);
+        } else {
+          setSlideIndex(slideIndex + 1);
+        }
+      }, 10000);
+      setTimeoutId(newTimeoutId);
 
-    return () => clearTimeout(newTimeoutId);
-  }, [slideIndex]);
-
-  const moveDot = (index) => {
-    setSlideIndex(index);
-    if (timeoutId) {
-      clearTimeout(timeoutId);
+      return () => clearTimeout(newTimeoutId);
     }
-  };
+  }, [slideIndex, isSmallScreen]);
+
+  // const moveDot = (index) => {
+  //   setSlideIndex(index);
+  //   if (timeoutId) {
+  //     clearTimeout(timeoutId);
+  //   }
+  // };
 
   return (
     <Wrapper>
-      <Div>
+      {/* <Div>
         <Title>
           <span>Canon</span>
           <span> camera</span>
@@ -83,7 +80,7 @@ export const Slider = () => {
             ></ButtonSlide>
           ))}
         </SlideBtnContainer>
-      </Div>
+      </Div> */}
       <SlideContainer>
         {dataSlider.map((item, index) => {
           return slideIndex === index + 1 ? (
@@ -92,10 +89,10 @@ export const Slider = () => {
               src={item.img}
               key={item.id}
             >
-              <ContainerPrice>
+              {/* <ContainerPrice>
                 <p>only</p>
                 <p>$89</p>
-              </ContainerPrice>
+              </ContainerPrice> */}
             </ImageContainer>
           ) : (
             <ImageContainer
@@ -103,10 +100,10 @@ export const Slider = () => {
               src={item.img}
               key={item.id}
             >
-              <ContainerPrice>
+              {/* <ContainerPrice>
                 <p>only</p>
                 <p>$89</p>
-              </ContainerPrice>
+              </ContainerPrice> */}
             </ImageContainer>
           );
         })}

@@ -22,6 +22,11 @@ export const Th = styled.th`
   line-height: 1.44;
 
   color: ${(p) => p.theme.colors.scndDarkText};
+
+  @media screen and (max-width: 450px) {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
 `;
 
 export const Td = styled.td`
@@ -33,6 +38,10 @@ export const Td = styled.td`
   font-size: 16px;
   line-height: 1.44;
   color: ${(p) => p.theme.colors.scndDarkText};
+  @media screen and (max-width: 450px) {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
 `;
 
 export const Text = styled.p`
