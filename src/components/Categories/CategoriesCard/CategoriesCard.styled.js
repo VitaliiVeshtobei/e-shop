@@ -5,6 +5,7 @@ export const ItemLink = styled(NavLink)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   padding: 10px;
@@ -27,7 +28,7 @@ export const Img = styled.img`
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 10px;
-  max-height: 240px;
+  height: 200px;
 `;
 export const ContainerImg = styled.div`
   width: 200px;
