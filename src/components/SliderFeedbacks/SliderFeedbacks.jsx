@@ -141,13 +141,13 @@ export const SliderFeedbacks = memo(
       dots: false,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
+      slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
       pauseOnHover: true,
       responsive: [
         {
-          breakpoint: 1000,
+          breakpoint: 1440,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,

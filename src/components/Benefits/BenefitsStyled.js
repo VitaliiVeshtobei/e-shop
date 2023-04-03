@@ -9,6 +9,13 @@ export const Container = styled('div')`
   margin-top: 75px;
   background-color: ${(p) => p.theme.colors.accentBg};
   border-radius: 20px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+    margin-left: -30px;
+    margin-right: -30px;
+    border-radius: 0;
+  }
 `;
 export const List = styled('ul')`
   display: flex;

@@ -14,6 +14,10 @@ export const Wrapper = styled.section`
     color: ${(p) => p.theme.colors.border};
     opacity: 1.2;
   }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+  }
 `;
 
 export const List = styled.ul`
